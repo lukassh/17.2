@@ -1,1 +1,3 @@
-console.log(process.env);
+var os = require('os');
+
+console.log(os.cpus());
