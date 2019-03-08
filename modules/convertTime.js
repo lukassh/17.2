@@ -7,9 +7,12 @@ function convertT(input) {
 			var restHrMin = ((input%3600)/60).toFixed(0);
 			var restHrMinSec = ((input%3600)%60).toFixed(0);
 
-			console.log('Wynik: '+ resultMin + 'min i ' + restMin + 'sec');
-			console.log('Wynik: '+ resultHr + 'h i ' + restHrMin + 'min i ' + restHrMinSec + 'sec');
-		}
+			if(resultHr>0) {
+				return('Wynik: '+ resultHr + 'h i ' + restHrMin + 'min i ' + restHrMinSec + 'sec');
+			} else {
+				return('Wynik: '+ resultMin + 'min i ' + restMin + 'sec');}
+
+			}
 		else {
 			console.log('Wrong input');
 		}
