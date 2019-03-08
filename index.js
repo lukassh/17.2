@@ -29,6 +29,7 @@ process.stdin.on('readable', function() {
                 break;
             case '/getOSinfo':
             	OSinfo.print();
+                break;
             default:
                 process.stderr.write('Wrong instruction!\n Choose: /exit, / sayhello or /getOSinfo\n');
         };
