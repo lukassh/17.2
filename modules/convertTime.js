@@ -8,14 +8,17 @@ function convertT(input) {
 			var restHrMinSec = ((input%3600)%60).toFixed(0);
 
 			if(resultHr>0) {
-				return('Wynik: '+ resultHr + 'h i ' + restHrMin + 'min i ' + restHrMinSec + 'sec');
+				return('Wynik: '+ resultHr + 'h, ' + restHrMin + 'min i ' + restHrMinSec + 'sec');
+				
 			} else {
 				return('Wynik: '+ resultMin + 'min i ' + restMin + 'sec');}
+					
 
 			}
 		else {
-			console.log('Wrong input');
+			return('Wrong input');
 		}
+
 }
 
 exports.time = convertT;
